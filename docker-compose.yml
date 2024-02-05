@@ -71,6 +71,8 @@ services:
     image: flightawareadsb/piaware_exporter:1.0
     ports:
         - 9101:9101
+    extra_hosts:
+        - "piaware:10.0.0.109"
     restart: always
     command: [
       "--piaware_host",
